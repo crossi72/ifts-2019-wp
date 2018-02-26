@@ -156,3 +156,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+register_post_type( 'hotels', array(
+	'label' => 'Alberghi'
+	, 'public' => true
+	, 'menu_icon' => 'dashicons-building'
+	, 'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt')
+	) );
