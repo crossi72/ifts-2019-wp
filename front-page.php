@@ -17,13 +17,25 @@ get_header(); ?>
 
     if ( $query->have_posts() ) {
         while ( $query->have_posts() ) {
-            $query->the_post();
-            
-            the_post_thumbnail( 'medium' );
+            ?>
+            <div class="hotel">
+                <?php
+                $query->the_post();
+                
+                echo('<a href="' . get_the_permalink() .'">');
+                    the_post_thumbnail( 'medium' );
+                echo('</a>');
 
-            the_title();
+                echo('<a href="' . get_the_permalink() .'">');
+                    the_title();
+                echo('</a>');
 
-            the_excerpt();
+                the_excerpt();
+
+               
+                ?>
+            </div>
+            <?php
         } // end while
     } // end if
 ?>

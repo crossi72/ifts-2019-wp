@@ -162,3 +162,5 @@ register_post_type( 'hotels', array(
 	, 'menu_icon' => 'dashicons-building'
 	, 'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt')
 	) );
+
+require('inc/custom-taxonomies.php');
